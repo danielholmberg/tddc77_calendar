@@ -24,10 +24,8 @@ public class Calendar extends AbstractCalendarItem {
 	protected ArrayList<Event> eventsWithSameName = new ArrayList<Event>();
 	// File to load Calendar from.
 	final static String DATE_FORMAT = "yyyymmdd";
-	final static File DANIELS_CALENDAR = new File("DANIEL_Calendar.txt");
-	final static File JONATHANS_CALENDAR = new File("JONATHAN_Calendar.txt");
-	final static File DANIELS_OLD_EVENTS = new File("DANIEL_Old_Events.txt");
-	final static File JONATHANS_OLD_EVENTS = new File("JONATHAN_Old_Events.txt");
+	final static File USER_CALENDAR = new File("USER_Calendar.txt");
+	final static File USER_OLD_EVENTS = new File("USER_Old_Events.txt");
 	private Scanner input = new Scanner(System.in);
 	private String name = "";
 
@@ -312,12 +310,12 @@ public class Calendar extends AbstractCalendarItem {
 	 */
 	private void saveOldEvent(Event event) {
 		try {
-			if (!DANIELS_OLD_EVENTS.exists()) {
+			if (!USER_OLD_EVENTS.exists()) {
 				System.err.println("We had to make a new file.");
-				DANIELS_OLD_EVENTS.createNewFile();
+				USER_OLD_EVENTS.createNewFile();
 			}
 			
-			FileWriter fileWriter = new FileWriter(DANIELS_OLD_EVENTS, true);
+			FileWriter fileWriter = new FileWriter(USER_OLD_EVENTS, true);
 
 			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 			bufferedWriter.write(
@@ -343,13 +341,7 @@ public class Calendar extends AbstractCalendarItem {
 		FileWriter fileWriter = null;
 		if (name.equals("Daniel Holmberg")) {
 			try {
-				writer = new PrintWriter(DANIELS_CALENDAR);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-		} else if (name.equals("Jonathan Brage")) {
-			try {
-				writer = new PrintWriter(JONATHANS_CALENDAR);
+				writer = new PrintWriter(USER_CALENDAR);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -358,19 +350,12 @@ public class Calendar extends AbstractCalendarItem {
 		writer.close();
 		try {
 			if (name.equals("Daniel Holmberg")) {
-				if (!DANIELS_CALENDAR.exists()) {
+				if (!USER_CALENDAR.exists()) {
 					System.err.println("We had to make a new file.");
-					DANIELS_CALENDAR.createNewFile();
+					USER_CALENDAR.createNewFile();
 				}
 
-				fileWriter = new FileWriter(DANIELS_CALENDAR, true);
-			} else if (name.equals("Jonathan Brage")) {
-				if (!JONATHANS_CALENDAR.exists()) {
-					System.err.println("We had to make a new file.");
-					JONATHANS_CALENDAR.createNewFile();
-				}
-
-				fileWriter = new FileWriter(JONATHANS_CALENDAR, true);
+				fileWriter = new FileWriter(USER_CALENDAR, true);
 			}
 
 			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);

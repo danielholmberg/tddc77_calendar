@@ -10,12 +10,9 @@ import java.util.Scanner;
 
 public class Driver {
 	// File to load Calendar from.
-	final static File DANIELS_CALENDAR = new File("DANIEL_Calendar.txt");
-	final static File JONATHANS_CALENDAR = new File("JONATHAN_Calendar.txt");
-	final static File DANIEL_PASSWORD_FILE = new File("DANIEL_PASSWORD.txt");
-	final static File JONATHAN_PASSWORD_FILE = new File("JONATHAN_PASSWORD.txt");
-	static String DANIEL_PASSWORD = "";
-	static String JONATHAN_PASSWORD = "";
+	final static File USER_CALENDAR = new File("USER_Calendar.txt");
+	final static File USER_PASSWORD_FILE = new File("USER_PASSWORD.txt");
+	static String USER_PASSWORD = "";
 	static String PASSWORD = "";
 	private static Scanner input = new Scanner(System.in);
 	
@@ -28,8 +25,7 @@ public class Driver {
 		Calendar user = new Calendar("Daniel Holmberg");
 		
 		try {
-			DANIEL_PASSWORD = readPassword(new FileInputStream(DANIEL_PASSWORD_FILE));
-			JONATHAN_PASSWORD = readPassword(new FileInputStream(JONATHAN_PASSWORD_FILE));
+			USER_PASSWORD = readPassword(new FileInputStream(USER_PASSWORD_FILE));
 		} catch (FileNotFoundException e2) {
 			e2.printStackTrace();
 		} catch (IOException e2) {
@@ -128,9 +124,9 @@ public class Driver {
 		user.addItem(SEARCH);
 		
 		if(isPasswordCorrect()) {
-			if (PASSWORD.equals(DANIEL_PASSWORD)) {
+			if (PASSWORD.equals(USER_PASSWORD)) {
 				try {
-					System.out.println(user.load(new FileInputStream(DANIELS_CALENDAR)));
+					System.out.println(user.load(new FileInputStream(USER_CALENDAR)));
 				} catch (FileNotFoundException e1) {
 					System.out.println("*** NO CALENDAR FILE FOUND! ***");
 				} catch (IOException e1) {
@@ -138,17 +134,6 @@ public class Driver {
 				}
 				user.setTitle("Daniel Holmberg");
 				user.setName("Daniel Holmberg");
-				MainMenu.addItem(user);
-			} else if (PASSWORD.equals(JONATHAN_PASSWORD)) {
-				try {
-					System.out.println(user.load(new FileInputStream(JONATHANS_CALENDAR)));
-				} catch (FileNotFoundException e1) {
-					System.out.println("*** NO CALENDAR FILE FOUND! ***");
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				user.setTitle("Jonathan Brage");
-				user.setName("Jonathan Brage");
 				MainMenu.addItem(user);
 			}
 		} 
@@ -167,11 +152,11 @@ public class Driver {
 		MainMenu.addItem(new AbstractCalendarItem("Save & Close") {
 			public void execute() {
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\n"
-						+ "||| Thanks You for using our Calendar Program |||" + "\n"
+						+ "||| Thanks You for using my Calendar Program |||" + "\n"
 						+ "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\n"
-						+ "Made by:	Daniel Holmberg & Jonathan Brage" + "\n"
-						+ "E-mail:		danielkurtholmberg@gmail.com" + "\n" + "		jonathanbrage95@gmail.com"
-						+ "\n" + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+						+ "Made by:	Daniel Holmberg" + "\n"
+						+ "E-mail:		danielkurtholmberg@gmail.com" + "\n"
+						+ "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 				
 				
 				user.save(user.getTitle());
@@ -222,11 +207,9 @@ public class Driver {
 	 */
 	private static void savePassword(String temp) throws FileNotFoundException {
 		FileOutputStream file = null;
-		if (PASSWORD.equals(DANIEL_PASSWORD)) {
-			file = new FileOutputStream(DANIEL_PASSWORD_FILE);
+		if (PASSWORD.equals(USER_PASSWORD)) {
+			file = new FileOutputStream(USER_PASSWORD_FILE);
 
-		} else if (PASSWORD.equals(JONATHAN_PASSWORD)) {
-			file = new FileOutputStream(JONATHAN_PASSWORD_FILE);
 		}
 		PASSWORD = temp;
 		PrintStream output = new PrintStream(file);
@@ -266,9 +249,7 @@ public class Driver {
 			temp = input.nextLine();
 			PASSWORD = temp;
 			counter++;
-			if (temp.equals(DANIEL_PASSWORD)) {
-				correctPassword = true;
-			} else if (temp.equals(JONATHAN_PASSWORD)) {
+			if (temp.equals(USER_PASSWORD)) {
 				correctPassword = true;
 			} else {
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~" + "\n" + "[ERROR: WRONG PASSWORD]");

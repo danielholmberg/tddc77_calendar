@@ -48,3 +48,8 @@ Info: Unknown
 Date: 2015/01/01
 Time: 01:00-01:01
 Loca: Unkown
+Name: EXAMENSARBETE
+Info: Påbörjar examensarbetet den 2a November 2020.
+Date: 2020/11/02-2021/03/31
+Time: 08:15-23:59
+Loca: Linköping, Sverige
