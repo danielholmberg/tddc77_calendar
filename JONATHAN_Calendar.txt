@@ -1,0 +1,20 @@
+Name: TEST2
+Info: TDDC75 - Digitalteknik
+Date: 2016/01/14
+Time: 14:00-16:00
+Loca: Universitetet
+Name: TEST3
+Info: test
+Date: 2016/03/15
+Time: 12:00-17:00
+Loca: Unkown
+Name: TEST4
+Info: Tenta Kravallen
+Date: 2016/01/21-2016/01/22
+Time: 21:00-03:00
+Loca: Kårallen
+Name: TEST0
+Info: TEST0
+Date: 2016/01/16
+Time: 12:00-13:00
+Loca: TEST0

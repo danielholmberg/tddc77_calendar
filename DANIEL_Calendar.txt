@@ -1,0 +1,50 @@
+Name: TENTA
+Info: TDDC77 - Objektorienterad programmering
+Date: 2016/01/12
+Time: 14:00-18:00
+Loca: SU-salarna i B-huset
+Name: OMLAX
+Info: TDDC75 - Digitalteknik
+Date: 2016/01/14
+Time: 14:00-16:00
+Loca: Universitetet
+Name: DÖDZKRÖK
+Info: FIFA och bärs med Andreas!
+Date: 2016/01/15-2016/01/16
+Time: 18:00-24:00
+Loca: Andreas Casa
+Name: PARTY
+Info: Fest hos Mange!
+Date: 2016/01/09-2016/01/10
+Time: 21:00-03:00
+Loca: Hos Mange
+Name: MIDDAG & FILMKVÄLL
+Info: Mys med Lisa Nordlöf
+Date: 2016/01/09-2016/01/10
+Time: 18:30-01:21
+Loca: Björnkärrsgatan 1D
+Name: TDDC77 - TENTA
+Info: test
+Date: 2016/03/15
+Time: 12:00-17:00
+Loca: Unkown
+Name: TK
+Info: Tenta Kravallen
+Date: 2016/01/21-2016/01/22
+Time: 21:00-03:00
+Loca: Kårallen
+Name: FÖEDELSEDAGSMIDDAG
+Info: Middag med Johanna och hennes familj
+Date: 2016/01/26
+Time: 18:00-22:00
+Loca: Linköping
+Name: EXAMINATION
+Info: Hej
+Date: 2016/01/19
+Time: 15:15-17:00
+Loca: SU17/18
+Name: TEST
+Info: Unknown
+Date: 2015/01/01
+Time: 01:00-01:01
+Loca: Unkown

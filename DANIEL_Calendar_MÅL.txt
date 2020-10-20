@@ -1,0 +1,86 @@
+DANIEL HOLMBERG  2016/01/02
+===========================
+0. Back
+1. EDIT Calendar
+2. Upcoming Events
+3. List All Events
+4. Search Event
+5. Show Time Span
+Ange val 0-5: 
+
+
+UPCOMING EVENTS 2016/01/02
+==========================
+
+Name: TEST
+Info: test
+Date: 2016/01/01-2016/12/12
+Time: 12:34-15:00
+Loca:
+
+
+EDIT CALENDAR  2016/01/02
+=========================
+0. Back
+1. Add New Event
+2. Remove Event
+Ange val 0-2: 
+
+LIST ALL EVENTS 2016/01/02
+==========================
+0.Back
+
+2016/01/02-2016/01/04 		PLUGGA 		13:15-22:00
+2016/01/07	 		TENTA 		13:15-22:00
+2016/02/04	 		GYMMA		13:15-22:00
+2016/02/05	 		TENTA 		13:15-22:00
+2016/02/15	 		PLUGGA 		13:15-22:00
+2016/03/01	 		GYMMA  		13:15-22:00
+
+
+SEARCH EVENT 2016/01/02
+=======================
+0. Back
+Enter the Name of the event:
+PLUGGA
+
+Found 1 event(s):
+
+Name: PLUGGA
+Info: Inför OmDugga
+Date: 2016/01/02
+Time: 13:15-22:00
+Loca: unkown
+
+Name: PLUGGA
+Info: Inför OmDugga
+Date: 2016/01/02-2016/01/04
+Time: 13:15-22:00
+Loca: unkown
+
+Name: PLUGGA
+Info: Inför OmDugga
+Date: 2016/01/02-2016/01/04
+Time: 13:15-22:00
+Loca: unkown
+
+SHOW TIME SPAN 2016/01/02
+=========================
+0. Back
+Enter Time Span to Showcase(yyyymmdd-yyyymmdd):
+20160101-20160131
+
+Found 2 event(s):
+
+2016/01/02-2016/01/04 		PLUGGA 		13:15-22:00
+2016/01/07-2016/01/07 		TENTA 		13:15-22:00
+
+
+[[ NAME, INFO, DATE, TIME, LOCA ], [ NAME, INFO, DATE, TIME, LOCA ], [ NAME, INFO, DATE, TIME, LOCA ]]
+
+
+
+
+
+
+      
